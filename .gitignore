@@ -1,0 +1,18 @@
+# Python environment
+.venv/
+__pycache__/
+*.py[cod]
+
+# OS files
+.DS_Store
+
+# Ignore the heavy 343MB folder (GitHub will block this)
+onnx_model/
+
+# Keep the quantized folder (This is ~85MB, GitHub allows it)
+!onnx_model_quant/
+
+# Ignore local test images/logs
+image.png
+*.log
+.cache/
