@@ -9,7 +9,8 @@ app = FastAPI(title="MainframeForge SFW Classifier API")
 
 # Load the lightweight ONNX model into memory (Runs on CPU, optimized for Render Free Tier)
 # Make sure "onnx_model/model.onnx" exists in your directory!
-session = ort.InferenceSession("onnx_model/model.onnx", providers=['CPUExecutionProvider'])
+# Update this line to match the new file name created by the script
+session = ort.InferenceSession("onnx_model_quant/model_quantized.onnx", providers=['CPUExecutionProvider'])
 
 def process_and_predict(image_bytes):
     """Preprocesses the image and runs ONNX inference"""
